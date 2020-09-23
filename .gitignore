@@ -1,0 +1,5 @@
+logs/
+venv/
+doors_id_list.csv/
+.idea/
+.DS_Store
