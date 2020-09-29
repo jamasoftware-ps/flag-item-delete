@@ -53,15 +53,15 @@ value to 'true' instructs the client to use OAuth authentication protocols
 
 #### Script PARAMETERS:
 This section contains settings required to run the script
-* `csv_file_path`: (string) relative path to the source csv file
+* `csv_file_path`: (string) Relative path to the source csv file
 * `csv_using_header`: (boolean) flag for if csv is using a header row
-* `csv_header_value`: (string) the column header of the identifier column in the CSV file, this is required 
-if `csv_using_header` is set to true.
+* `csv_header_value`: (string) the column header of the identifier column in the CSV file<sup>1</sup>
+* `deleted_flag_field_map`: (json map) inline json map of item type id -> field name <sup>2</sup> 
 
-* `deleted_flag_field_map`: (json map) inline json map of item type id -> field name. every item type included in the source file
-must be included into this map. (e.g. `csv_using_header = {"114": "deleted", "27": "is_deleted"}`) 
+<sup>1</sup> This field is required if `csv_using_header` is set to true, and ignored if set to false.
 
-
+<sup>2</sup> Every item type included in the source file must be included into this map and double quotes must 
+be wrapped on each key and value in this map  (example: `deleted_flag_field_map = {"114": "deleted", "27": "is_deleted"}`
 
 
 
