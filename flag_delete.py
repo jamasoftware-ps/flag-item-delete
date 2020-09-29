@@ -49,7 +49,7 @@ def parse_config():
     return configuration
 
 
-def create_jama_client(config: configparser.ConfigParser):
+def create_jama_client(config):
     global instance_url
     url = None
     user_id = None
