@@ -57,7 +57,7 @@ def create_jama_client(config: configparser.ConfigParser):
     oauth = None
     try:
         url = config.get('CLIENT_SETTINGS', 'jama_connect_url').strip()
-        # Clenup URL field
+        # Clean up the URL field
         while url.endswith('/') and url != 'https://' and url != 'http://':
             url = url[0:len(url) - 1]
         # If http or https method not specified in the url then add it now.
@@ -130,6 +130,14 @@ def process_csv():
 
 
 if __name__ == "__main__":
+
+    #  high level script logic:
+    #
+    #  1. parse the csv content to get the list of unique identifiers
+    #  2. fetch the corresponding Jama API ID for each unique identifier in the list
+    #  3. update each item's mapped field flag to be "checked"
+    #
+
     # Setup logging
     init_logging()
 
