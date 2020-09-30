@@ -56,7 +56,7 @@ def create_jama_client(config):
     user_secret = None
     oauth = None
     try:
-        url = config.get('CLIENT_SETTINGS', 'jama_connect_url').strip()
+        url = config['CLIENT_SETTINGS']['jama_connect_url']
         # Clean up the URL field
         while url.endswith('/') and url != 'https://' and url != 'http://':
             url = url[0:len(url) - 1]
