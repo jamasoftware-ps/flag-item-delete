@@ -53,7 +53,7 @@ value to 'true' instructs the client to use OAuth authentication protocols
 
 #### Script PARAMETERS:
 This section contains settings required to run the script
-* `csv_file_path`: (string) Relative path to the source csv file
+* `csv_file_path`: (string) relative path to the source csv file
 * `csv_using_header`: (boolean) flag for if csv is using a header row
 * `csv_header_value`: (string) the column header of the identifier column in the CSV file<sup>1</sup>
 * `deleted_flag_field_map`: (json map) inline json map of item type id -> field name <sup>2</sup> 
